@@ -5,7 +5,6 @@ int main() {
   int tamanho;
 
   // Lê o tamanho do vetor
-  printf("Digite o tamanho do vetor: ");
   scanf("%d", &tamanho);
 
   // Aloca dinamicamente a memória para o vetor
@@ -18,13 +17,12 @@ int main() {
   }
 
   // Lê os dados do vetor
-  printf("Digite os elementos do vetor:\n");
   for (int i = 0; i < tamanho; i++) {
     scanf("%d", &vetor[i]);
   }
 
   // Apresenta os dados do vetor
-  printf("Vetor: [");
+  printf("["); 
   if (vetor != NULL && tamanho > 0) { // Verifica se o vetor é válido e não vazio
     for (int i = 0; i < tamanho - 1; i++) {
       printf("%d,", vetor[i]);
@@ -33,7 +31,7 @@ int main() {
   } else {
     printf("vazio");
   }
-  printf("]\n");
+  printf("]\n"); 
 
   // Desaloca a memória alocada
   free(vetor);
